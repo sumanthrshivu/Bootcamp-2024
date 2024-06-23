@@ -1,0 +1,464 @@
+2024-06-15 22:31:24,054 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-15 22:31:24,079 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-15 22:31:24,083 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-15 22:31:24,084 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-15 22:31:24,084 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-15 22:51:23,321 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (207ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-15 23:01:22,055 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-15 23:01:22,075 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-15 23:01:22,078 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-15 23:01:22,079 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-15 23:01:22,079 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-15 23:09:14,636 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (125ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-15 23:09:14,636 [20] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (96ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-15 23:10:25,968 [16] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:10:26,272 [18] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:10:26,307 [18] INFO  JWTLoginAPI.Services.UserService - total count of the user is 1
+2024-06-15 23:10:26,332 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:10:26,337 [16] INFO  JWTLoginAPI.Controllers.UserController - user count is 1
+2024-06-15 23:17:35,096 [29] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:17:37,059 [35] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:17:37,077 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:17:37,077 [36] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:17:37,077 [36] INFO  JWTLoginAPI.Services.UserService - total count of the user is 1
+2024-06-15 23:17:37,077 [17] INFO  JWTLoginAPI.Services.UserService - total count of the user is 1
+2024-06-15 23:17:37,081 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:17:37,081 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 1
+2024-06-15 23:17:37,082 [36] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:17:37,082 [36] INFO  JWTLoginAPI.Controllers.UserController - user count is 1
+2024-06-15 23:18:02,758 [30] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:18:02,764 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:18:02,764 [16] INFO  JWTLoginAPI.Services.UserService - total count of the user is 1
+2024-06-15 23:18:02,767 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:18:02,768 [16] INFO  JWTLoginAPI.Controllers.UserController - user count is 1
+2024-06-15 23:19:43,765 [38] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:19:43,775 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:19:43,776 [38] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:19:43,783 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:19:43,784 [38] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:20:13,864 [29] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:20:13,869 [29] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:20:13,870 [29] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:20:13,874 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:20:13,874 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:20:16,639 [17] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:20:16,641 [39] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:20:16,642 [39] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:20:16,643 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:20:16,644 [16] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:20:17,832 [29] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:20:17,834 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:20:17,835 [17] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:20:17,836 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:20:17,837 [16] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:20:21,301 [29] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:20:21,305 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:20:21,305 [38] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:20:21,307 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:20:21,307 [38] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:20:29,298 [38] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:20:29,301 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:20:29,302 [38] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:20:29,303 [41] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:20:29,304 [41] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:20:30,814 [16] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:20:30,816 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:20:30,817 [17] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:20:30,818 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:20:30,819 [16] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:20:56,655 [41] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:20:56,664 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:20:56,664 [16] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:20:56,670 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:20:56,671 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:21:16,228 [16] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:21:16,234 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:21:16,234 [16] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:21:16,239 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:21:16,239 [16] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:21:17,815 [38] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:21:17,816 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:21:17,817 [16] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:21:17,819 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:21:17,824 [38] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:21:20,587 [17] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:21:20,589 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:21:20,589 [38] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:21:20,591 [41] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:21:20,592 [41] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:21:22,953 [17] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:21:22,954 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:21:22,955 [16] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:21:22,956 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:21:22,956 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:21:30,760 [17] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:21:30,763 [43] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:21:30,765 [43] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:21:30,769 [29] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:21:30,770 [29] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:21:37,596 [16] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:21:37,599 [41] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:21:37,599 [41] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:21:37,601 [39] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:21:37,601 [39] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:21:46,777 [16] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:21:46,779 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:21:46,780 [38] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:21:46,781 [29] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:21:46,782 [29] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:21:48,683 [16] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:21:48,685 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:21:48,686 [17] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:21:48,688 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:21:48,688 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:22:21,943 [29] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:22:21,975 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (28ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:22:21,977 [16] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:22:21,988 [46] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:22:21,989 [46] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:23:18,854 [29] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:23:18,869 [46] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (13ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:23:18,869 [46] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:23:18,876 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:23:18,877 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:23:20,458 [29] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:23:20,460 [48] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:23:20,464 [48] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:23:20,465 [48] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:23:20,465 [48] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:23:41,169 [48] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:23:41,176 [40] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:23:41,177 [40] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:23:41,179 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:23:41,180 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:25:53,038 [38] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:25:53,047 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:25:53,057 [38] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:25:53,064 [51] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:25:53,064 [51] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:26:31,913 [51] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:26:31,929 [49] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (14ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:26:31,929 [49] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:26:31,935 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:26:31,935 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:27:06,391 [52] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:27:06,393 [51] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:27:06,393 [51] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:27:06,395 [51] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:27:06,395 [51] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:27:12,085 [49] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:27:12,088 [52] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:27:12,089 [52] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:27:12,093 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:27:12,093 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:33:12,154 [47] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:33:12,181 [52] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:33:12,181 [52] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:33:12,190 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (8ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:33:12,190 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:33:30,916 [51] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:33:30,919 [50] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:33:30,924 [50] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:33:30,927 [52] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:33:30,927 [52] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:33:44,399 [17] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:33:44,403 [50] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:33:44,403 [50] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:33:44,404 [52] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:33:44,405 [52] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:34:43,842 [52] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:34:43,849 [52] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:34:43,849 [52] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:34:43,856 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:34:43,856 [17] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:35:55,600 [52] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:35:55,607 [50] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:35:55,607 [50] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:35:55,612 [51] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:35:55,612 [51] INFO  JWTLoginAPI.Controllers.UserController - user count is 9
+2024-06-15 23:35:57,390 [42] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-15 23:35:57,396 [51] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-15 23:35:57,396 [51] INFO  JWTLoginAPI.Services.UserService - total count of the user is 9
+2024-06-15 23:35:57,408 [42] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-15 23:35:57,413 [41] INFO  JWTLoginAPI.Controllers.UserController - user count is 9

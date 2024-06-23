@@ -1,0 +1,93 @@
+2024-06-23 11:11:04,077 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-23 11:11:04,102 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-23 11:11:04,112 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-23 11:11:04,114 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-23 11:11:04,114 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-23 11:11:37,981 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (458ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-23 11:11:38,156 [3] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-23 11:11:38,442 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (103ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-23 11:11:38,507 [9] INFO  JWTLoginAPI.Services.UserService - total count of the user is 7
+2024-06-23 11:11:38,564 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (11ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-23 11:11:38,761 [3] INFO  JWTLoginAPI.Controllers.UserController - user count is 7
+2024-06-23 11:12:01,131 [5] INFO  JWTLoginAPI.Services.UserService - enter into UpdateUserAysnc method
+2024-06-23 11:12:01,264 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Id] = @__p_0
+2024-06-23 11:12:01,439 [19] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (10ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 50) (DbType = AnsiString), @p2='?' (Size = 50) (DbType = AnsiString), @p3='?' (Size = 8000) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Register] SET [Email] = @p0, [Firstname] = @p1, [Lastname] = @p2, [Password] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2024-06-23 11:12:23,877 [3] INFO  JWTLoginAPI.Services.UserService - enter into UpdateUserAysnc method
+2024-06-23 11:12:23,882 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Id] = @__p_0
+2024-06-23 11:12:23,921 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Register]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-06-23 11:29:01,537 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-23 11:29:01,550 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-23 11:29:01,553 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-23 11:29:01,554 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-23 11:29:01,554 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-23 11:29:11,290 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (85ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-23 11:29:11,409 [3] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-23 11:29:11,607 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (39ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-23 11:29:11,645 [13] INFO  JWTLoginAPI.Services.UserService - total count of the user is 6
+2024-06-23 11:29:11,668 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-23 11:29:11,740 [3] INFO  JWTLoginAPI.Controllers.UserController - user count is 6
+2024-06-23 11:36:49,607 [39] INFO  JWTLoginAPI.Services.UserService - enter into UpdateUserAysnc method
+2024-06-23 11:36:49,739 [38] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Id] = @__p_0
+2024-06-23 11:37:30,016 [38] INFO  JWTLoginAPI.Services.UserService - enter into UpdateUserAysnc method
+2024-06-23 11:37:30,027 [35] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Id] = @__p_0
+2024-06-23 11:37:30,308 [34] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 50) (DbType = AnsiString), @p2='?' (Size = 50) (DbType = AnsiString), @p3='?' (Size = 8000) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Register] SET [Email] = @p0, [Firstname] = @p1, [Lastname] = @p2, [Password] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2024-06-23 11:42:10,790 [35] INFO  JWTLoginAPI.Services.UserService - enter into UpdateUserAysnc method
+2024-06-23 11:42:10,794 [35] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Id] = @__p_0
+2024-06-23 11:42:10,862 [35] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Register]
+OUTPUT 1
+WHERE [Id] = @p0;

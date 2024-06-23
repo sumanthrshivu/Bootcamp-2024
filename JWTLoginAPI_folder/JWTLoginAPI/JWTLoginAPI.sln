@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTLoginAPI", "JWTLoginAPI\JWTLoginAPI.csproj", "{4DC1DA4B-6658-4349-9039-D50BA2CC771F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DC1DA4B-6658-4349-9039-D50BA2CC771F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC1DA4B-6658-4349-9039-D50BA2CC771F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC1DA4B-6658-4349-9039-D50BA2CC771F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC1DA4B-6658-4349-9039-D50BA2CC771F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0663C210-BD72-4576-8EA2-5B5C959E7DB6}
+	EndGlobalSection
+EndGlobal

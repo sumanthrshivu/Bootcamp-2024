@@ -1,0 +1,143 @@
+2024-06-02 09:04:55,212 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-02 09:04:55,225 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-02 09:04:55,228 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-02 09:04:55,229 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-02 09:04:55,229 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-02 09:08:42,401 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (147ms) [Parameters=[@__registerModel_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Register] AS [r]
+        WHERE [r].[Email] = @__registerModel_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-06-02 09:09:15,682 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 50) (DbType = AnsiString), @p2='?' (Size = 50) (DbType = AnsiString), @p3='?' (Size = 8000) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Register] ([Email], [Firstname], [Lastname], [Password])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-06-02 09:43:08,122 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-02 09:43:08,135 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-02 09:43:08,138 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-02 09:43:08,138 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-02 09:43:08,138 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-02 09:46:20,079 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-02 09:46:20,098 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-02 09:46:20,102 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-02 09:46:20,104 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-02 09:46:20,104 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-02 09:46:38,776 [5] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (194ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 09:50:43,161 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-02 09:50:43,173 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-02 09:50:43,176 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-02 09:50:43,176 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-02 09:50:43,176 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-02 09:50:58,675 [5] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (169ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 09:51:31,935 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-02 09:51:31,948 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-02 09:51:31,951 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-02 09:51:31,952 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-02 09:51:31,952 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-02 10:01:04,867 [20] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (77ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:01:54,348 [18] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:06:08,845 [41] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:06:46,765 [43] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:08:15,178 [39] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__registerModel_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Register] AS [r]
+        WHERE [r].[Email] = @__registerModel_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-06-02 10:08:27,657 [36] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__registerModel_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Register] AS [r]
+        WHERE [r].[Email] = @__registerModel_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-06-02 10:08:28,011 [36] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 50) (DbType = AnsiString), @p2='?' (Size = 50) (DbType = AnsiString), @p3='?' (Size = 8000) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Register] ([Email], [Firstname], [Lastname], [Password])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-06-02 10:08:44,947 [46] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:08:55,177 [43] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:09:25,995 [42] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:10:24,745 [23] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:13:59,503 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:14:14,699 [12] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:16:28,464 [56] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:16:48,485 [57] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:17:36,016 [57] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:18:11,739 [56] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 10:19:41,926 [66] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 11:40:32,614 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-02 11:40:32,626 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-02 11:40:32,629 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-02 11:40:32,629 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-02 11:40:32,629 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-02 11:44:06,687 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (113ms) [Parameters=[@__userdetails_Email_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Email] = @__userdetails_Email_0
+2024-06-02 11:55:51,698 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-02 11:55:51,720 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-02 11:55:51,722 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-02 11:55:51,723 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-02 11:55:51,723 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\

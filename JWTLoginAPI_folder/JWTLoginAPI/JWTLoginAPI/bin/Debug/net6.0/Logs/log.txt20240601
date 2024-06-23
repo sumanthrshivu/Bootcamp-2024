@@ -1,0 +1,196 @@
+2024-06-01 13:14:31,599 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-01 13:14:31,613 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-01 13:14:31,616 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-01 13:14:31,617 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-01 13:14:31,617 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-01 13:14:32,379 [3] INFO  JWTLoginAPI.ExceptionMiddleware - Request delete and custom middle ware is working fine
+2024-06-01 13:14:32,459 [8] INFO  JWTLoginAPI.ExceptionMiddleware - Request delete and custom middle ware is working fine
+2024-06-01 13:14:33,174 [5] INFO  JWTLoginAPI.ExceptionMiddleware - Request delete and custom middle ware is working fine
+2024-06-01 13:14:33,175 [8] INFO  JWTLoginAPI.ExceptionMiddleware - Request delete and custom middle ware is working fine
+2024-06-01 13:14:33,175 [9] INFO  JWTLoginAPI.ExceptionMiddleware - Request delete and custom middle ware is working fine
+2024-06-01 13:14:33,487 [3] INFO  JWTLoginAPI.ExceptionMiddleware - Request delete and custom middle ware is working fine
+2024-06-01 13:14:48,711 [9] INFO  JWTLoginAPI.ExceptionMiddleware - Request delete and custom middle ware is working fine
+2024-06-01 13:14:52,652 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (108ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE [r].[Id] = @__p_0
+2024-06-01 13:14:52,919 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 50) (DbType = AnsiString), @p2='?' (Size = 50) (DbType = AnsiString), @p3='?' (Size = 10) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Register] SET [Email] = @p0, [Firstname] = @p1, [Lastname] = @p2, [Password] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2024-06-01 13:16:32,778 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-01 13:16:32,790 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-01 13:16:32,793 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-01 13:16:32,793 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-01 13:16:32,793 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-01 13:16:33,745 [5] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger
+2024-06-01 13:16:33,836 [5] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/index.html
+2024-06-01 13:16:34,295 [8] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui-standalone-preset.js
+2024-06-01 13:16:34,295 [14] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui-bundle.js
+2024-06-01 13:16:34,309 [5] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui.css
+2024-06-01 13:16:34,611 [14] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/v1/swagger.json
+2024-06-01 13:16:45,789 [14] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /api/User
+2024-06-01 13:16:48,506 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (103ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-01 13:16:48,681 [5] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE 0 = 1
+2024-06-01 13:17:18,413 [5] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /api/User
+2024-06-01 13:17:18,433 [19] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-01 13:17:18,445 [19] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+ORDER BY [r].[Id] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2024-06-01 13:18:10,878 [19] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /api/User
+2024-06-01 13:26:50,293 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-01 13:26:50,672 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-01 13:26:50,680 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-01 13:26:50,681 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-01 13:26:50,681 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-01 13:26:55,108 [5] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger
+2024-06-01 13:27:02,056 [8] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/index.html
+2024-06-01 13:27:03,117 [9] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui.css
+2024-06-01 13:27:03,726 [13] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui-bundle.js
+2024-06-01 13:27:04,691 [8] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui-standalone-preset.js
+2024-06-01 13:27:05,206 [8] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/v1/swagger.json
+2024-06-01 13:27:26,576 [3] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /api/User
+2024-06-01 13:27:28,975 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (115ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-01 13:27:29,147 [18] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE 0 = 1
+2024-06-01 13:28:19,914 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-01 13:28:19,926 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-01 13:28:19,929 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-01 13:28:19,930 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-01 13:28:19,930 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-01 13:28:21,549 [3] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger
+2024-06-01 13:28:24,072 [8] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/index.html
+2024-06-01 13:28:24,529 [9] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui-standalone-preset.js
+2024-06-01 13:28:24,529 [8] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui-bundle.js
+2024-06-01 13:28:24,529 [5] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui.css
+2024-06-01 13:28:24,842 [14] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/v1/swagger.json
+2024-06-01 13:28:35,458 [9] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /api/User
+2024-06-01 13:28:37,593 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (95ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-01 13:28:37,726 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE 0 = 1
+2024-06-01 13:32:58,833 [1] INFO  Program - Log4net has been configured
+2024-06-01 13:32:59,225 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-01 13:32:59,225 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-01 13:32:59,226 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-01 13:32:59,226 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-01 13:32:59,226 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-01 13:33:00,019 [5] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger
+2024-06-01 13:33:00,110 [13] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/index.html
+2024-06-01 13:33:00,550 [10] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui-standalone-preset.js
+2024-06-01 13:33:00,550 [8] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui-bundle.js
+2024-06-01 13:33:00,550 [3] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/swagger-ui.css
+2024-06-01 13:33:00,993 [3] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /swagger/v1/swagger.json
+2024-06-01 13:33:07,538 [3] INFO  JWTLoginAPI.ExceptionMiddleware - Executing middleware for /api/User
+2024-06-01 13:33:09,810 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (116ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-01 13:33:09,967 [5] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE 0 = 1
+2024-06-01 13:37:25,424 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-01 13:37:25,449 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-01 13:37:25,452 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-01 13:37:25,453 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-01 13:37:25,453 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-01 13:38:02,409 [16] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'JWTLoginAPI.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-06-01 13:39:30,005 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-01 13:39:30,017 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-01 13:39:30,020 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-01 13:39:30,020 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-01 13:39:30,020 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-01 13:39:41,880 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (137ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-01 13:39:42,057 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE 0 = 1
+2024-06-01 13:39:42,063 [8] INFO  JWTLoginAPI.Controllers.UserController - user count is 6
+2024-06-01 13:53:36,611 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-01 13:53:36,665 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-01 13:53:36,673 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-01 13:53:36,676 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-01 13:53:36,676 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-01 13:53:45,249 [14] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'JWTLoginAPI.Services.UserService`1[System.Boolean]'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateOpenGeneric(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot, Boolean throwOnConstraintViolation)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateOpenGeneric(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-06-01 13:55:13,632 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7242
+2024-06-01 13:55:13,646 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5242
+2024-06-01 13:55:13,649 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2024-06-01 13:55:13,649 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2024-06-01 13:55:13,650 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\Anthology bootcamp\JWTLoginAPI_folder\JWTLoginAPI\JWTLoginAPI\
+2024-06-01 13:55:21,233 [8] INFO  JWTLoginAPI.Services.UserService - enter into GetUserList method
+2024-06-01 13:55:23,062 [5] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (113ms) [Parameters=[@__searchString_0='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Register] AS [r]
+WHERE (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Firstname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Lastname], '')) > 0 OR (@__searchString_0 LIKE '') OR CHARINDEX(@__searchString_0, COALESCE([r].[Email], '')) > 0
+2024-06-01 13:55:23,122 [5] INFO  JWTLoginAPI.Services.UserService - total count of the user is 6
+2024-06-01 13:55:23,200 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Email], [r].[Firstname], [r].[Lastname], [r].[Password]
+FROM [Register] AS [r]
+WHERE 0 = 1
+2024-06-01 13:55:23,204 [3] INFO  JWTLoginAPI.Controllers.UserController - user count is 6
