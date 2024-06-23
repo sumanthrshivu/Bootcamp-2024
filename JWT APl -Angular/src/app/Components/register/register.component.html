@@ -1,0 +1,15 @@
+<div class="login-container">
+    <form [formGroup]="registrationform" (ngSubmit)="OnSubmit(registrationform.value)">
+        <Label for="username">Username:</Label>
+        <input type="text" id="username"  formControlName="username" placeholder="please enter username">
+        <Label for="Dob">Date of birth:</Label>
+        <input type="date" formControlName="Dob" placeholder="please select dob">
+        <Label for="Password">Password:</Label>
+        <input type="password" id="password"  formControlName="password" placeholder="please enter Password">
+        <button type="submit">Register</button>
+        <button (click)="Login()">Login</button>
+        <Span *ngIf="reg_responsedata!=''">
+            <b>{{reg_responsedata}}</b>
+        </Span>
+    </form>
+</div>

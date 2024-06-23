@@ -1,0 +1,19 @@
+<div class="split-screen-container">
+  <div class="left-section">
+    <!-- Background image -->
+  </div>
+  <div class="right-section">
+    <form [formGroup]="loginform" (ngSubmit)="OnSubmit()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" [(ngModel)]="model.email" formControlName="username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="model.password" formControlName="password" placeholder="Password">
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <div>{{ displaymsg }}</div>
+  </div>
+</div>

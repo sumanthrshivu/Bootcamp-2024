@@ -1,0 +1,21 @@
+.split-screen-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-section {
+    flex: 1;
+    background-image: url('../../../assets/images/gg.jpg'); /* Adjust the path */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .right-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+ 

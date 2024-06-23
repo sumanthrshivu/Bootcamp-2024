@@ -1,0 +1,7 @@
+<!-- src/app/app.component.html -->
+<app-header *ngIf="shouldShowHeaderAndFooter()"></app-header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<app-footer *ngIf="shouldShowHeaderAndFooter()"></app-footer>
+
